@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebAtima About</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">        
+    <style>
+    body{font-size:1rem;}
+    p{max-width: 36em;}
+    .measure{max-width: 36em;}
+    .maxw{width:75%;}
+    .dib{display:inline-block}
+    .center{margin-right:auto;margin-left:auto}
+    </style>
+  </head>
+<body>
+<article class="maxw center" style="font-family:Times,serif;font-size:16px;">
+
+<h1 class="">About</h1>
+<p>
+    This is a web user interface for the Catima library, a 
+    C++ library for calculation of energy loss, range, angular scattering and time of flight of the particle passing through a matter.
+    The library is based on a physics used in the ATIMA code, however its not a 100% copy of the ATIMA physics.    
+    For the details about the calculation check Helmut's ATIMA webpage.
+    The source of of the library can be found <a href="https://github.com/hrosiak/catima">here</a>
+</p>
+
+<h2 class="">Changelog</h2>
+<p >
+See <a href="changelog.html">here</a>
+</p>
+
+<h1 class="">Physics Reference</h1>
+<a href="physics.html">Physics reference</a>
+
+<h1 class="">Contact</h1>
+<p>
+    a.prochazka_at_gsi.de
+</p>
+
+<h1 class="">Manual</h1>
+<div class="">
+    <h4>Pojectile</h4>
+    <p>
+    1. Select the projectile either by writing the nucleus symbol, ie 12C, or by setting A, Z fields<br>
+    2. Select the kinetic energy, velocity etc<br>
+    3. Mass of the projectile is calculated from the AME16.
+    </p>
+    
+    <h4>Target Material</h4>
+    <p>
+    Material layer can be added by clicking <i>Add Matter</i> button. 
+    Material must be specified either by symbol field or by Z. 
+    If atomic number of material is omited or 0, the atomic weight will be used.
+    Selected compund materials are supported, Z and symbopl names are compatible with MOCADI compund materials.
+    Material can be added from already saved file by clicking on <i>Add From File</i> button. In this case the material as added to the existing list.
+    </p>
+    <p>
+    To edit existing material layer click the edit button or double click on the corresponding material row.
+    </p>
+    
+    <h4>Calculate</h4>
+    <p>
+    The results of the calculation can be obtained via <i>Calculate</i> button.
+    </p>
+    
+    <h4>Save/Load</h4>
+    <p>
+    Current configuration can be saved via menu item <i>Save</i>. 
+    The selected projectile and the material layers are save in JSON text format. 
+    The saved file can be loaded via menu item <i>Load</i>
+    </p>
+    
+</div>
+
+
+
+<h1 class="">References</h1>
+<a href="https://web-docs.gsi.de/~weick/atima/">ATIMA</a> <br>
+<a href="#">AME16, Chinese Physics C 41 (2017)</a> <br>
+<a href="http://web-docs.gsi.de/~weick/mocadi/mocadi-manual.html#3-25">MOCADI</a>
+
+</article>
+
+</body>
+</html>
