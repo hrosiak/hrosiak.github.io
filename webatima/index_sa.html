@@ -12879,6 +12879,10 @@ var NucID = (function(){
         elements_z_symbol[112]="Cn";
         elements_z_symbol[113]="Uut";
         elements_z_symbol[114]="Fl";
+        elements_z_symbol[115]="Mc";
+        elements_z_symbol[116]="Lv";
+        elements_z_symbol[117]="Ts";
+        elements_z_symbol[118]="Og";
         
         // create symbol-> proton number table
         var e;
@@ -12904,13 +12908,13 @@ var NucID = (function(){
     
     //Get element Symbol from Z number
     var GetElSymbol = function(z){
-        if(z<0 || z>114){return "";}
+        if(z<0 || z>118){return "";}
         return elements_z_symbol[z];
     };
     
     
     var GetSymbol = function(a,z){
-        if(z<0 || z>112){return "";}
+        if(z<0 || z>118){return "";}
         if(a==0){
             return elements_z_symbol[z];
         }
