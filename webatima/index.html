@@ -6,8 +6,11 @@
     <meta name="description" content="energy loss calculator, stopping power, atima, cpp atima, webatima">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <meta http-equiv="Cache-control" content="no-cache">
-    <link rel="stylesheet" href="styles/core_3964921523.css" />
-    <script src="https://unpkg.com/mithril/mithril.js"></script>
+    <meta name="theme-color" content="#1B3D63"/>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" 
+      type="image/png" 
+      href="img/favicon.ico">
     <script>
     function loader(txt){
         var loader_icon = '<svg version="1.1" id="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><path opacity="0.2" fill="#000" d="M20.210,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/><path fill="#000" stroke="green", d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"/> </path> </svg>';
@@ -17,34 +20,25 @@
   </head>
   <body>
     <div id="NS">
-    <h3>WebATIMA</h3>
+    <div id="temp" style="position:fixed; top:0px;display: flex; flex-direction: column; align-items: center;justify-content: center; width:100%; height:100%; background-color: whitesmoke;">
+    <h3 style="color:midnightblue; font-size: 200%; border-bottom: solid 1px midnightblue; text-shadow: 1px 1px 2px #000000;">WebATIMA</h3>
     <p>
     Web application to calculate energy loss, stopping power and other quantities of ions in material.<br>
-    If you see this message something went wrong or webatima can not run in your browser.
     </p>
+    <h4 style="color:midnightblue; font-size: 150%;">(loading, please wait)</h4>
+    <div id="loading" style="margin-top: 1rem;"></div>
+
+    <p style="width: auto;">
     <h4>supported browsers:</h4>
-    <ul>
-    <li>Chrome</li>
-    <li>Firefox</li>
-    <li>MS Edge</li>
-    <li>Safari 6.1+</li>
-    <li>Opera 12.1+</li>
-    <li>Android Browser 4.4+</li>
-    <li>and similar</li>
-    </ul>
-    <div id="loading"></div>
+        Chrome, Firefox, MS Edge, Safari 8+, Opera 19+, Android Browser 4.4+ and similar
+    </p>
     </div>
-    <script>
-        var main_element = document.getElementById('loading');
-        main_element.innerHTML = loader("loading ...");
-    </script>
+    </div>
+<script>!function(e){function r(r){for(var n,o,i=r[0],a=r[1],l=0,c=[];l<i.length;l++)o=i[l],t[o]&&c.push(t[o][0]),t[o]=0;for(n in a)Object.prototype.hasOwnProperty.call(a,n)&&(e[n]=a[n]);for(u&&u(r);c.length;)c.shift()()}var n={},t={3:0};function o(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.e=function(e){var r=[],n=t[e];if(0!==n)if(n)r.push(n[2]);else{var i=new Promise(function(r,o){n=t[e]=[r,o]});r.push(n[2]=i);var a,l=document.getElementsByTagName("head")[0],u=document.createElement("script");u.charset="utf-8",u.timeout=120,o.nc&&u.setAttribute("nonce",o.nc),u.src=function(e){return o.p+"scripts/"+({0:"vendors~index",1:"hlib~index",2:"index"}[e]||e)+"_"+{0:"34bd01037f2fc9512104",1:"11dd6f08d8b51487ff86",2:"13ea8fe88a0774236352"}[e]+".js"}(e),a=function(r){u.onerror=u.onload=null,clearTimeout(c);var n=t[e];if(0!==n){if(n){var o=r&&("load"===r.type?"missing":r.type),i=r&&r.target&&r.target.src,a=new Error("Loading chunk "+e+" failed.\n("+o+": "+i+")");a.type=o,a.request=i,n[1](a)}t[e]=void 0}};var c=setTimeout(function(){a({type:"timeout",target:u})},12e4);u.onerror=u.onload=a,l.appendChild(u)}return Promise.all(r)},o.m=e,o.c=n,o.d=function(e,r,n){o.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:n})},o.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.t=function(e,r){if(1&r&&(e=o(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var t in e)o.d(n,t,function(r){return e[r]}.bind(null,t));return n},o.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(r,"a",r),r},o.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},o.p="",o.oe=function(e){throw console.error(e),e};var i=window.webpackJsonp=window.webpackJsonp||[],a=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var u=a;o(o.s=2)}([function(e,r,n){e.exports=n.p+"styles/a4008b8e.css"},function(e,r,n){e.exports=n.p+"mithril_eb39.js"},function(e,r,n){"use strict";n.r(r);var t=n(0),o=n.n(t);n(1);navigator;var i=document.getElementById("loading");i.innerHTML=loader("loading UI library");var a=document.createElement("link");a.rel="stylesheet",a.href=o.a,a.onerror=function(){throw i.innerHTML="Failed to load UI library, maybe network problem",new Error("Could not load css")},document.head.appendChild(a);var l=document.createElement("script");l.src="https://unpkg.com/mithril/mithril.min.js",l.async=!1,l.onload=function(){i.innerHTML=loader("loading web atima library"),Promise.all([n.e(1),n.e(0),n.e(2)]).then(n.bind(null,3)).then(function(e){console.log("index loaded")}).catch(function(e){throw i.innerHTML="Failed to load web atima library, maybe network problem",new Error("Could not load webatima library")})},l.onerror=function(){throw i.innerHTML="Failed to load UI library, maybe network problem",new Error("Could not load UI library")},document.head.appendChild(l)}]);
+//# sourceMappingURL=init.js.map</script>
 
-    <script src="scripts/vendor.min_1721251954.js"></script>
-
-    <script src="scripts/script.min_172470619.js"></script>
-    
-    <noscript>
-        <h3>Webatima application requires a modern browser with JavaScript enabled</h3>
-    </noscript>
+<noscript>
+<h3>Webatima application requires a modern browser with JavaScript enabled</h3>
+</noscript>
 </body>
 </html>
